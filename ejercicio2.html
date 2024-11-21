@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+        window.onload = function() {
+            const nombre = prompt("Ingresa tu nombre:");
+            const apellido = prompt("Ingresa tu apellido:");
+            const fechaNacimiento = prompt("Ingresa tu fecha de nacimiento (formato: YYYY-MM-DD):");
+
+            const hoy = new Date();
+            const nacimiento = new Date(fechaNacimiento);
+            const diasVividos = Math.floor((hoy - nacimiento) / (1000 * 60 * 60 * 24));
+
+            alert(`¡Bienvenido, ${nombre} ${apellido}!`);
+            alert(`Has vivido aproximadamente ${diasVividos} días.`);
+        };
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+    <p>Este ejercicio calcula cuántos días ha vivido el usuario desde su nacimiento.</p>
+    <a href="index.html">Volver al menú</a>
+</body>
+</html>
